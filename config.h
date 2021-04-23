@@ -7,6 +7,8 @@
  */
 static char *font = "mono:pixelsize=14:antialias=true:autohint=true";
 static char *font2[] = { "JoyPixels:pixelsize=10:antialias=true:autohint=true" };
+// static char *font = { "mononoki:style=Regular" };
+// static char *font2[] = { "mononoki:style=Regular" };
 static int borderpx = 2;
 
 /*
@@ -105,36 +107,114 @@ char *termname = "st-256color";
  *
  *	stty tabs
  */
-unsigned int tabspaces = 8;
+unsigned int tabspaces = 4;
 
 /* bg opacity */
-float alpha = 0.8;
+float alpha = 0.85;
 
-/* Terminal colors (16 first used in escape sequence) */
+/* Terminal colors (Cheescake dark) */
 static const char *colorname[] = {
-	"#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
-	"#cc241d",
-	"#98971a",
-	"#d79921",
-	"#458588",
-	"#b16286",
-	"#689d6a",
-	"#a89984",
-	"#928374",
-	"#fb4934",
-	"#b8bb26",
-	"#fabd2f",
-	"#83a598",
-	"#d3869b",
-	"#8ec07c",
+	"#404040",
+	"#b9454b",
+	"#bd8d46",
+	"#f6e497",
+	"#f595a7",
+	"#d28e2a",
+	"#ebcd4f",
+	"#fcfae1",
+	"#262626",
+	"#e75252",
+	"#dea552",
+	"#d1c180",
+	"#d1a5ad",
+	"#b47a24",
+	"#b9a659",
+	"#f3f2e7",
+ 	[255] = 0,
+	"#1d2021",
 	"#ebdbb2",
-	[255] = 0,
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#add8e6", /* 256 -> cursor */
-	"#555555", /* 257 -> rev cursor*/
-	"#282828", /* 258 -> bg */
-	"#ebdbb2", /* 259 -> fg */
+ 	"#040200", /* 258 -> bg */
+ 	"#ebdbb2", /* 259 -> fg */
 };
+
+
+// /* Terminal colors (Brogrammer) */
+// static const char *colorname[] = {
+// 	"#1f1f1f",
+// 	"#f81118",
+// 	"#2dc55e",
+// 	"#ecba0f",
+// 	"#2a84d2",
+// 	"#4e5ab7",
+// 	"#1081d6",
+// 	"#d6dbe5",
+// 	"#d6dbe5",
+// 	"#de352e",
+// 	"#1dd361",
+// 	"#f3bd09",
+// 	"#1081d6",
+// 	"#5350b9",
+// 	"#0f7ddb",
+// 	"#ffffff",
+//  	[255] = 0,
+// 	"#1d2021",
+// 	"#ebdbb2",
+//  	"#040200", /* 258 -> bg */
+//  	"#ebdbb2", /* 259 -> fg */
+// };
+
+
+// * Terminal colors (Gruvbox) */
+//static const char *colorname[] = {
+//	"#1d2021",
+//	"#cc241d",
+//	"#98971a",
+//	"#d79921",
+//	"#458588",
+//	"#b16286",
+//	"#689d6a",
+//	"#a89984",
+//	"#928374",
+//	"#fb4934",
+//	"#b8bb26",
+//	"#fabd2f",
+//	"#83a598",
+//	"#d3869b",
+//	"#8ec07c",
+//	"#ebdbb2",
+// 	[255] = 0,
+//	"#1d2021",
+//	"#ebdbb2",
+// 	"#040200", /* 258 -> bg */
+// 	"#ebdbb2", /* 259 -> fg */
+//};
+
+
+// /* Terminal colors (16 first used in escape sequence) */
+// static const char *colorname[] = {
+// 	"#1d2021", /* hard contrast: #1d2021 / soft contrast: #32302f */
+// 	"#cc241d",
+// 	"#98971a",
+// 	"#d79921",
+// 	"#fb4934",
+// 	"#b16286",
+// 	"#689d6a",
+// 	"#a89984",
+// 	"#928374",
+// 	"#00bbff",
+// 	"#b8bb26",
+// 	"#fabd2f",
+// 	"#fb4934",
+// 	"#d3869b",
+// 	"#00c008",
+// 	"#ebdbb2",
+// 	[255] = 0,
+// 	/* more colors can be added after 255 to use with DefaultXX */
+// 	"#add8e6", /* 256 -> cursor */
+// 	"#555555", /* 257 -> rev cursor*/
+// 	"#040200", /* 258 -> bg */
+// 	"#ebdbb2", /* 259 -> fg */
+// };
 
 
 /*
@@ -259,8 +339,6 @@ static Shortcut shortcuts[] = {
 	{ MODKEY,               XK_Page_Down,   kscrolldown,    {.i = -1} },
 	{ MODKEY,               XK_k,           kscrollup,      {.i =  1} },
 	{ MODKEY,               XK_j,           kscrolldown,    {.i =  1} },
-	{ MODKEY,               XK_Up,          kscrollup,      {.i =  1} },
-	{ MODKEY,               XK_Down,        kscrolldown,    {.i =  1} },
 	{ MODKEY,               XK_u,           kscrollup,      {.i = -1} },
 	{ MODKEY,               XK_d,           kscrolldown,    {.i = -1} },
 	{ MODKEY,		XK_s,		changealpha,	{.f = -0.05} },
