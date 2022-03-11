@@ -5,8 +5,9 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "mono:pixelsize=14:antialias=true:autohint=true";
-static char *font2[] = { "JoyPixels:pixelsize=10:antialias=true:autohint=true" };
+static char *font = "mono:pixelsize=12:antialias=true:autohint=true";
+// static char *font2[] = { "JoyPixels:pixelsize=12:antialias=true:autohint=true" };
+static char *font2[] = { "octicons:style=Medium" };
 // static char *font = { "mononoki:style=Regular" };
 // static char *font2[] = { "mononoki:style=Regular" };
 static int borderpx = 2;
@@ -110,11 +111,11 @@ char *termname = "st-256color";
 unsigned int tabspaces = 4;
 
 /* bg opacity */
-float alpha = 0.85;
+float alpha = 0.97;
 
 /* Terminal colors (Cheescake dark) */
 static const char *colorname[] = {
-	"#404040",
+	"#151515",
 	"#b9454b",
 	"#bd8d46",
 	"#f6e497",
@@ -133,7 +134,7 @@ static const char *colorname[] = {
  	[255] = 0,
 	"#1d2021",
 	"#ebdbb2",
- 	"#040200", /* 258 -> bg */
+ 	"#151515", /* 258 -> bg */
  	"#ebdbb2", /* 259 -> fg */
 };
 
@@ -164,7 +165,7 @@ static const char *colorname[] = {
 // };
 
 
-// * Terminal colors (Gruvbox) */
+// /* Terminal colors (Gruvbox) */
 //static const char *colorname[] = {
 //	"#1d2021",
 //	"#cc241d",
@@ -185,7 +186,7 @@ static const char *colorname[] = {
 // 	[255] = 0,
 //	"#1d2021",
 //	"#ebdbb2",
-// 	"#040200", /* 258 -> bg */
+// 	"#151515", /* 258 -> bg */
 // 	"#ebdbb2", /* 259 -> fg */
 //};
 
