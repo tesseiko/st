@@ -1,13 +1,14 @@
 /* See LICENSE file for copyright and license details. */
-
+#include <stdlib.h>
 /*
  * appearance
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "mono:pixelsize=12:antialias=true:autohint=true";
-// static char *font2[] = { "JoyPixels:pixelsize=12:antialias=true:autohint=true" };
-static char *font2[] = { "octicons:style=Medium" };
+// static char *font = "JetBrains:pixelsize=12:antialias=true:autohint=true";
+static char *font = "JetBrainsMono Nerd Font:pixelsize=12:antialias=true:autohint=true";
+static char *font2[] = { "JoyPixels:pixelsize=12:antialias=true:autohint=true" };
+// static char *font2[] = { "xft:Devicons:pixelsize=16:antialias=true:hinting=true" };
 // static char *font = { "mononoki:style=Regular" };
 // static char *font2[] = { "mononoki:style=Regular" };
 static int borderpx = 2;
