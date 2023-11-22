@@ -6,7 +6,7 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 // static char *font = "JetBrains:pixelsize=12:antialias=true:autohint=true";
-static char *font = "JetBrainsMono Nerd Font:pixelsize=12:antialias=true:autohint=true";
+static char *font = "JetBrainsMono NF:pixelsize=12:antialias=true:autohint=true";
 static char *font2[] = { "JoyPixels:pixelsize=12:antialias=true:autohint=true" };
 // static char *font2[] = { "xft:Devicons:pixelsize=16:antialias=true:hinting=true" };
 // static char *font = { "mononoki:style=Regular" };
