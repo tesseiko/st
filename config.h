@@ -31,8 +31,8 @@ char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
 char *vtiden = "\033[?6c";
 
 /* Kerning / character bounding-box multipliers */
-static float cwscale = 1.0;
-static float chscale = 1.0;
+static float cwscale = 1.1;
+static float chscale = 1.2;
 
 /*
  * word delimiter string
@@ -85,11 +85,11 @@ static unsigned int cursorthickness = 2;
  *    Bold affects lines thickness if boxdraw_bold is not 0. Italic is ignored.
  * 0: disable (render all U25XX glyphs normally from the font).
  */
-const int boxdraw = 1;
-const int boxdraw_bold = 1;
+const int boxdraw = 0;
+const int boxdraw_bold = 0;
 
 /* braille (U28XX):  1: render as adjacent "pixels",  0: use font */
-const int boxdraw_braille = 1;
+const int boxdraw_braille = 0;
 
 /*
  * bell volume. It must be a value between -100 and 100. Use 0 for disabling
@@ -122,31 +122,31 @@ float alpha = 0.97;
 float alphaOffset = 0.0;
 float alphaUnfocus;
 
-/* Terminal colors (Cheescake dark) */
-static const char *colorname[] = {
-	"#151515",
-	"#b9454b",
-	"#bd8d46",
-	"#f6e497",
-	"#f595a7",
-	"#d28e2a",
-	"#ebcd4f",
-	"#fcfae1",
-	"#262626",
-	"#e75252",
-	"#dea552",
-	"#d1c180",
-	"#d1a5ad",
-	"#b47a24",
-	"#b9a659",
-	"#f3f2e7",
- 	[255] = 0,
-	"#1d2021",
-	"#ebdbb2",
- 	"#151515", /* 258 -> bg */
- 	"#ebdbb2", /* 259 -> fg */
-};
-
+// /* Terminal colors (Cheescake dark) */
+// static const char *colorname[] = {
+// 	"#151515",
+// 	"#b9454b",
+// 	"#bd8d46",
+// 	"#f6e497",
+// 	"#f595a7",
+// 	"#d28e2a",
+// 	"#ebcd4f",
+// 	"#fcfae1",
+// 	"#262626",
+// 	"#e75252",
+// 	"#dea552",
+// 	"#d1c180",
+// 	"#d1a5ad",
+// 	"#b47a24",
+// 	"#b9a659",
+// 	"#f3f2e7",
+//  	[255] = 0,
+// 	"#1d2021",
+// 	"#ebdbb2",
+//  	"#151515", /* 258 -> bg */
+//  	"#ebdbb2", /* 259 -> fg */
+// };
+//
 
 // /* Terminal colors (Brogrammer) */
 // static const char *colorname[] = {
@@ -174,30 +174,30 @@ static const char *colorname[] = {
 // };
 
 
-// /* Terminal colors (Gruvbox) */
-//static const char *colorname[] = {
-//	"#1d2021",
-//	"#cc241d",
-//	"#98971a",
-//	"#d79921",
-//	"#458588",
-//	"#b16286",
-//	"#689d6a",
-//	"#a89984",
-//	"#928374",
-//	"#fb4934",
-//	"#b8bb26",
-//	"#fabd2f",
-//	"#83a598",
-//	"#d3869b",
-//	"#8ec07c",
-//	"#ebdbb2",
-// 	[255] = 0,
-//	"#1d2021",
-//	"#ebdbb2",
-// 	"#151515", /* 258 -> bg */
-// 	"#ebdbb2", /* 259 -> fg */
-//};
+/* Terminal colors (Gruvbox) */
+static const char *colorname[] = {
+"#1d2021",
+"#cc241d",
+"#98971a",
+"#d79921",
+"#458588",
+"#b16286",
+"#689d6a",
+"#a89984",
+"#928374",
+"#fb4934",
+"#b8bb26",
+"#fabd2f",
+"#83a598",
+"#d3869b",
+"#8ec07c",
+"#ebdbb2",
+	[255] = 0,
+"#1d2021",
+"#ebdbb2",
+	"#151515", /* 258 -> bg */
+	"#ebdbb2", /* 259 -> fg */
+};
 
 
 // /* Terminal colors (16 first used in escape sequence) */
