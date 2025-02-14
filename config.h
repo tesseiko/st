@@ -118,7 +118,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 4;
 
 /* bg opacity */
-float alpha = 0.97;
+float alpha = 0.9;
 float alphaOffset = 0.0;
 float alphaUnfocus;
 
@@ -193,7 +193,7 @@ static const char *colorname[] = {
 "#8ec07c",
 "#ebdbb2",
 	[255] = 0,
-"#1d2021",
+"#000000",
 "#ebdbb2",
 	"#000000", /* 258 -> bg */
 	"#ebdbb2", /* 259 -> fg */
